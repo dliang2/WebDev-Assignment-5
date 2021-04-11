@@ -38,7 +38,7 @@ const App = () => {
     }
 
   return (
-    <div>
+    <div id="content-wrapper">
       <div id="header">
         <div id="header-text">
           <h1>Zip Code Search</h1>
