@@ -38,16 +38,18 @@ const App = () => {
     }
 
   return (
-    <div className="App">
-      <header>
-        <h2>Zip Code Search</h2>
-      </header>
-
-        <label>
-          Enter a Zip Code
-        </label>
-        <input type="text" onChange={handleChange} />
-
+    <div id="content-wrapper">
+      <div id="header">
+        <div id="header-text">
+          <h1>Zip Code Search</h1>
+        </div>
+      </div>
+        <div id="search-box">
+          <label>
+            Enter Zipcode: 
+          </label>
+          <input className="search-box-field" placeholder="Enter a zipcode!" type="text" onChange={handleChange} />
+      </div>
       {generateCities()}
     </div>
 );
