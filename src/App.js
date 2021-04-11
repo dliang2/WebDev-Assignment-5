@@ -1,20 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { City } from "./components/City"
-import styled, { keyframes } from "styled-components";
-import { fadeIn } from "react-animations"
-import { bounceIn } from "react-animations"
 import "./App.css";
-
-const fadeAnimation = keyframes`${fadeIn}`;
-const FadeIn = styled.div`
-  animation: 2s $(fadeAnimation);
-`;
-
-const bounceAnimation = keyframes`${bounceIn}`;
-const BounceIn = styled.div`
-  animation: 1s $(bounceAnimation);
-`;
 
 const App = () => {
   const [zipCode, setZipCode] = useState("");
@@ -52,16 +39,16 @@ const App = () => {
 
   return (
     <div>
-      <div className="nav bg-black text-white text-center">
-        <div class="container-fluid position-relative my-4">
-          <BounceIn><p className="h2">Zip Code Search</p></BounceIn>
+      <div id="header">
+        <div id="header-text">
+          <h1>Zip Code Search</h1>
         </div>
       </div>
-        <div className="container mt-4">
-          <FadeIn><label>
-            Enter Zipcode
+        <div id="search-box">
+          <label>
+            Enter Zipcode: 
           </label>
-          <input type="text" onChange={handleChange} /></FadeIn>
+          <input className="search-box-field" placeholder="Enter a zipcode!" type="text" onChange={handleChange} />
       </div>
       {generateCities()}
     </div>
