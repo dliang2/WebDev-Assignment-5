@@ -6,6 +6,7 @@ body{
   text-align: center;
   width: 980px;
   margin: auto auto;
+  background-image: url("image.jpg");
 }
 h1{
   animation: bounceIn 0.75s;
