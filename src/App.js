@@ -6,12 +6,12 @@ import "./App.css";
 const App = () => {
   const [zipCode, setZipCode] = useState("");
   const [cities, setCities] = useState([]);
-  
+
   useEffect(() => {
     const handleSearch = async () => {
         if (zipCode === "") return;
         let linkToAPI = "https://ctp-zip-api.herokuapp.com/zip/" + zipCode;
-      
+
         try {
           let response = await axios.get(linkToAPI);
           setCities(response.data);
@@ -40,7 +40,7 @@ const App = () => {
   return (
     <div className="App">
       <header>
-        <h2>Assignment 5</h2>
+        <h2>Zip Code Search</h2>
       </header>
 
         <label>
